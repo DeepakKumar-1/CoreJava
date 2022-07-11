@@ -16,7 +16,7 @@ class MyFrame extends JFrame {
 
         tf2.setColumns(15);
         tf2.setValue(new Date());
-        setLayout(new FlowLayout());
+//        setLayout(new FlowLayout());
 
         NumberFormat nf = NumberFormat.getInstance();
         NumberFormatter nft = new NumberFormatter(nf);
@@ -25,14 +25,16 @@ class MyFrame extends JFrame {
         JFormattedTextField tf3 = new JFormattedTextField(nft);
         tf3.setColumns(15);
 
-        JTextArea ta = new JTextArea(30, 30);
-        ta.copy();
-        ta.paste();
-
+        JTextArea area;
+        area=new JTextArea();
+        area.setBounds(20,75,250,
+                200);
+        setLayout(null);
         add(tf1);
         add(tf2);
         add(tf3);
-        add(ta);
+        add(area);
+        // Why TextArea ork with Layout NULL Not with Floe Layout ?????
     }
 }
 public class SwingTextField {
